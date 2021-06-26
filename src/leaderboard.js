@@ -11,17 +11,22 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 
 
+
 const useStyles = makeStyles({
   root: {
     width: '90%',
-    margin: '5%',
+    margin: '4%',
+    boxShadow: "2vw 2vw 2vw 1vw rgba(0, 0, 0, 0.6)",
+    borderRadius: "10px"
   },
   container: {
     maxHeight: 440,
+    borderRadius: "10px",
+
   },
   headrow: {
-    backgroundColor:"#000",
-    color:"#fff",
+    backgroundColor: "#000",
+    color: "#fff",
   },
 });
 
@@ -39,43 +44,47 @@ export default function LeaderBoard() {
     setPage(0);
   };
   const [data, setData] = useState([]);
-      
-        useEffect(() => {
-          Tabletop.init({
-            key: "1WEvBC2HAwbFdnWq7s5GeFkDUC4OPIS87w4b4vlo6bLY",
-            simpleSheet: true
-          })
-            .then((data) => setData(data))
-            .catch((err) => console.warn(err));
-        }, []);
+
+  useEffect(() => {
+    Tabletop.init({
+      key: "1WEvBC2HAwbFdnWq7s5GeFkDUC4OPIS87w4b4vlo6bLY",
+      simpleSheet: true
+    })
+      .then((data) => setData(data))
+      .catch((err) => console.warn(err));
+  }, []);
 
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
+        <h1 style={{ color: "#ff0000", fontSize: "40px" }}>Leader Board</h1>
+
         <Table stickyHeader aria-label="sticky table">
+
           <TableHead>
-          <TableRow>
-            <TableCell className={classes.headrow}>S. No.</TableCell>
-            <TableCell className={classes.headrow}>Name</TableCell>
-            <TableCell className={classes.headrow}>Workshops</TableCell>
-            <TableCell className={classes.headrow}>Mini Event 1</TableCell>
-            <TableCell className={classes.headrow}>Mini Event 2</TableCell>
-            <TableCell className={classes.headrow}>Total Points</TableCell>
-          </TableRow>
+
+            <TableRow>
+              <TableCell className={classes.headrow}>S. No.</TableCell>
+              <TableCell className={classes.headrow}>Name</TableCell>
+              <TableCell className={classes.headrow}>Workshops</TableCell>
+              <TableCell className={classes.headrow}>Mini Event 1</TableCell>
+              <TableCell className={classes.headrow}>Mini Event 2</TableCell>
+              <TableCell className={classes.headrow}>Total Points</TableCell>
+            </TableRow>
           </TableHead>
           <TableBody>
-            {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((item,i) => {
+            {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((item, i) => {
               return (
                 <TableRow hover role="checkbox" tabIndex={-1} key={i}>
-                  
-              <TableCell component="th" scope="row">
-                {item.SNo}
-              </TableCell>
-              <TableCell>{item.Name}</TableCell>
-              <TableCell>{item.Workshops}</TableCell>
-              <TableCell>{item.MiniEvent1}</TableCell>
-              <TableCell>{item.MiniEvent2}</TableCell>
-              <TableCell>{item.Total}</TableCell>
+
+                  <TableCell component="th" scope="row">
+                    {item.SNo}
+                  </TableCell>
+                  <TableCell>{item.Name}</TableCell>
+                  <TableCell>{item.Workshops}</TableCell>
+                  <TableCell>{item.MiniEvent1}</TableCell>
+                  <TableCell>{item.MiniEvent2}</TableCell>
+                  <TableCell>{item.Total}</TableCell>
                 </TableRow>
               );
             })}
