@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState} from "react";
 import Tabletop from "tabletop";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -64,26 +64,19 @@ export default function LeaderBoard() {
           <TableHead>
 
             <TableRow>
-              <TableCell className={classes.headrow}>S. No.</TableCell>
+              <TableCell className={classes.headrow}>Rank</TableCell>
               <TableCell className={classes.headrow}>Name</TableCell>
-              <TableCell className={classes.headrow}>Workshops</TableCell>
-              <TableCell className={classes.headrow}>Mini Event 1</TableCell>
-              <TableCell className={classes.headrow}>Mini Event 2</TableCell>
               <TableCell className={classes.headrow}>Total Points</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((item, i) => {
               return (
-                <TableRow hover role="checkbox" tabIndex={-1} key={i}>
-
+                <TableRow hover role="checkbox" tabIndex={-1} aria-checked="false"  key={i}>
                   <TableCell component="th" scope="row">
-                    {item.SNo}
+                    {item.Rank}
                   </TableCell>
                   <TableCell>{item.Name}</TableCell>
-                  <TableCell>{item.Workshops}</TableCell>
-                  <TableCell>{item.MiniEvent1}</TableCell>
-                  <TableCell>{item.MiniEvent2}</TableCell>
                   <TableCell>{item.Total}</TableCell>
                 </TableRow>
               );

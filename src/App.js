@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import LeaderBoard from './leaderboard';
 import Footer from './components/footer/footer';
