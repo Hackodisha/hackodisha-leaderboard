@@ -16,17 +16,18 @@ const useStyles = makeStyles({
   root: {
     margin: '4%',
     boxShadow: "2vw 2vw 2vw 1vw rgba(0, 0, 0, 0.6)",
-    borderRadius: "10px",
+    borderRadius: "10px"
   },
   container: {
     maxHeight: 440,
     borderRadius: "10px",
-
+    backgroundColor: "#121212",
+    color:"#ffffff"
   },
   headrow: {
     backgroundColor: "#000",
     color: "#fff",
-  },
+  }
 });
 
 export default function LeaderBoard() {
@@ -56,25 +57,26 @@ export default function LeaderBoard() {
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
-        <h1 style={{ color: "#ff0000", fontSize: "40px" }}>Leader Board</h1>
+        <h1 style={{ color: "#ffffff",fontSize: "40px",fontWeight:900 }}>Leader Board</h1>
 
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              <TableCell className={classes.headrow}>Rank</TableCell>
-              <TableCell className={classes.headrow}>Name</TableCell>
-              <TableCell className={classes.headrow}>Total Points</TableCell>
+              <TableCell className={classes.headrow} style={{color:"#ffffff",fontWeight:1000,fontSize:"1.1rem"}}>Rank</TableCell>
+              <TableCell className={classes.headrow} style={{color:"#ffffff",fontWeight:1000,fontSize:"1.1rem"}}>Name</TableCell>
+              <TableCell className={classes.headrow} style={{color:"#ffffff",fontWeight:1000,fontSize:"1.1rem"}}>Total Points</TableCell>
             </TableRow>
           </TableHead>
+
           <TableBody>
             {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((item, i) => {
               return (
-                <TableRow hover role="checkbox" tabIndex={-1} aria-checked="false"  key={i}>
-                  <TableCell component="th" scope="row">
+                <TableRow hover  role="checkbox" tabIndex={-1} aria-checked="false"  key={i}>
+                  <TableCell component="th" scope="row" style={{color:"#ffffff",fontWeight:1000,fontSize:"1.1rem"}}>
                     {item.Rank}
                   </TableCell>
-                  <TableCell>{item.Name}</TableCell>
-                  <TableCell>{item.Total}</TableCell>
+                  <TableCell style={{color:"#ffffff",fontWeight:1000,fontSize:"1.1rem"}}>{item.Name}</TableCell>
+                  <TableCell style={{color:"#ffffff",fontWeight:1000,fontSize:"1.1rem"}}>{item.Total}</TableCell>
                 </TableRow>
               );
             })}
@@ -89,6 +91,7 @@ export default function LeaderBoard() {
         page={page}
         onChangePage={handleChangePage}
         onChangeRowsPerPage={handleChangeRowsPerPage}
+  
       />
     </Paper>
   );

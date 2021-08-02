@@ -1,3 +1,14 @@
+*::-webkit-scrollbar {
+  width: 7px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #242526;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 100%, 0.4);
+  border-radius: 20px;
+}
+
 .App {
   text-align: center;
   background: url("../src/assets/images/hackodishabg.png");
@@ -9,15 +20,18 @@
   background-position: bottom;
 }
 
-.styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-title__1YiiY.styles_no-tabfocus__1HmyD {
+.styles_faq-row-wrapper__3vA1D
+  .styles_row-body__1NvUo
+  .styles_faq-row__2YF3c
+  .styles_row-title__1YiiY.styles_no-tabfocus__1HmyD {
   height: 80px;
-  }
+}
 
-  .main{
-    overflow-x: hidden;
-  }
+.main {
+  overflow-x: hidden;
+}
 
-  /* @media screen and (max-width:992px) {
+/* @media screen and (max-width:992px) {
     .App{
       background-position: 70% top;
     }
