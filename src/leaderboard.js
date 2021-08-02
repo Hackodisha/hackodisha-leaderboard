@@ -14,10 +14,9 @@ import TableRow from '@material-ui/core/TableRow';
 
 const useStyles = makeStyles({
   root: {
-    width: '90%',
     margin: '4%',
     boxShadow: "2vw 2vw 2vw 1vw rgba(0, 0, 0, 0.6)",
-    borderRadius: "10px"
+    borderRadius: "10px",
   },
   container: {
     maxHeight: 440,
@@ -60,9 +59,7 @@ export default function LeaderBoard() {
         <h1 style={{ color: "#ff0000", fontSize: "40px" }}>Leader Board</h1>
 
         <Table stickyHeader aria-label="sticky table">
-
           <TableHead>
-
             <TableRow>
               <TableCell className={classes.headrow}>Rank</TableCell>
               <TableCell className={classes.headrow}>Name</TableCell>
