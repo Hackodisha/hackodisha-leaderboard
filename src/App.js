@@ -1,9 +1,8 @@
-import React from 'react';
-import './App.css';
-import LeaderBoard from './leaderboard';
-import Footer from './components/footer/footer';
+import React from "react";
+import "./App.css";
+import LeaderBoard from "./leaderboard";
+import Footer from "./components/footer/footer";
 import { Navbar } from "./components/navbar";
-
 
 function App() {
   return (

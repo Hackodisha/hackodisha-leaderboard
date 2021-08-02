@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Accessibility from "./accessibility";
 
-
 const NavLinksContainer = styled.nav`
   height: 100%;
   display: flex;
@@ -82,7 +81,7 @@ export function MobileNavLinks() {
       {/* <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} /> */}
       {isOpen && (
         <LinksWrapper>
-          {links.map(link => {
+          {links.map((link) => {
             return (
               <LinkItem>
                 <Link href={"#" + link} onClick={() => setOpen(false)}>

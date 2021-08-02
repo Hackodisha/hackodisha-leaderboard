@@ -8,12 +8,11 @@ export const WebsiteRights = styled.p`
 
 export const FooterContainer = styled.div`
   background-color: transparent;
-  ${'' /* overflow: hidden; */}
+  ${"" /* overflow: hidden; */}
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 `;
 
 export const SocialMedia = styled.section`
@@ -22,7 +21,6 @@ export const SocialMedia = styled.section`
 `;
 
 export const SocialMediaWrap = styled.div`
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +29,7 @@ export const SocialMediaWrap = styled.div`
   margin: -15px auto 15px auto;
   @media screen and (max-width: 820px) {
     flex-direction: column;
-    width:90%;
+    width: 90%;
   }
 `;
 
