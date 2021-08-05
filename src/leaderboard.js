@@ -26,6 +26,9 @@ const useStyles = makeStyles({
     backgroundColor: "#000",
     color: "#fff",
   },
+  selectIcon: {
+    color: '#ffffff'
+  }
 });
 
 export default function LeaderBoard() {
@@ -137,12 +140,17 @@ export default function LeaderBoard() {
       </TableContainer>
       <TablePagination
         rowsPerPageOptions={[5, 10, 20]}
+        SelectProps={classes.selectIcon}
         component="div"
         count={data.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onChangePage={handleChangePage}
         onChangeRowsPerPage={handleChangeRowsPerPage}
+        style={{
+          backgroundColor: '#121212',
+          color: '#ffffff'
+        }}
       />
     </Paper>
   );
