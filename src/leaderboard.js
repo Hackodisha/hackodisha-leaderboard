@@ -143,6 +143,10 @@ export default function LeaderBoard() {
         page={page}
         onChangePage={handleChangePage}
         onChangeRowsPerPage={handleChangeRowsPerPage}
+        style={{
+          backgroundColor: '#121212',
+          color: '#ffffff'
+        }}
       />
     </Paper>
   );
