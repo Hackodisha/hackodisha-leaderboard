@@ -13,6 +13,7 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top:15vh;
 `;
 
 export const SocialMedia = styled.section`

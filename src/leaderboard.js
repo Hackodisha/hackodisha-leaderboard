@@ -17,15 +17,16 @@ const useStyles = makeStyles({
     borderRadius: "10px",
   },
   container: {
-    maxHeight: 440,
     borderRadius: "10px",
     backgroundColor: "#121212",
     color: "#ffffff",
+    overflowX: "hidden",
   },
   headrow: {
     backgroundColor: "#000",
     color: "#fff",
   },
+  
 });
 
 export default function LeaderBoard() {
