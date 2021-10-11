@@ -16,7 +16,7 @@
     "react-typeform-embed": "^0.2.1",
     "styled-components": "^5.3.0",
     "tabletop": "^1.6.3",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
